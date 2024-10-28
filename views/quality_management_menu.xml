@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="quality_management_main_menu"
+              web_icon="quality_management.static/description/icon.png"
+              name="Quality Management" sequence="300"/>
+
+    <menuitem id="quality_management_menu_complaints"
+              parent="quality_management_main_menu"
+              name="Complaints" sequence="100"/>
+
+    <menuitem id="quality_management_menu_investigations"
+              parent="quality_management_main_menu"
+              name="Investigations" sequence="200"/>
+
+</odoo>

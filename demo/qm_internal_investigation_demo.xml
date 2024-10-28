@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="qm_int_investigation_demo_0" model="qm.internal.investigation">
+            <field name="complaint_id" ref="qm_complaint_demo_1"/>
+            <field name="name">INV0001</field>
+            <field name="state">done</field>
+            <field name="performer_id" ref="qm_partner_demo_1"/>
+            <field name="participants_ids"
+                   eval="[(6, 0, [ref('quality_management.qm_partner_demo_6'),
+                                  ref('quality_management.qm_partner_demo_7'),
+                                  ref('quality_management.qm_partner_demo_5')])]"/>
+            <field name="act_number">PI-1234</field>
+            <field name="act_date">2024-09-02</field>
+            <field name="reason_description">The damage occurred during the loading of the goods at the port</field>
+            <field name="classification">critical</field>
+            <field name="result_description">The reasons have been clarified and necessary
+                actions have been planned to improve the quality of downloaders.</field>
+        </record>
+
+        <record id="qm_int_investigation_demo_1" model="qm.internal.investigation">
+            <field name="complaint_id" ref="qm_complaint_demo_2"/>
+            <field name="name">INV0003</field>
+            <field name="state">at_work</field>
+            <field name="performer_id" ref="qm_partner_demo_1"/>
+            <field name="participants_ids"
+                   eval="[(6, 0, [ref('quality_management.qm_partner_demo_4'),
+                                  ref('quality_management.qm_partner_demo_5')])]"/>
+            <field name="act_number">PI-1254</field>
+            <field name="act_date">2024-09-27</field>
+            <field name="reason_description">When packing the goods in the warehouse,
+                    the employees did not attach certificates to the products.</field>
+            <field name="classification">major</field>
+            <field name="result_description">Conduct additional briefings</field>
+        </record>
+
+        <record id="qm_int_investigation_demo_2" model="qm.internal.investigation">
+            <field name="complaint_id" ref="qm_complaint_demo_2"/>
+            <field name="name">INV0002</field>
+            <field name="state">at_work</field>
+            <field name="performer_id" ref="qm_partner_demo_3"/>
+            <field name="participants_ids"
+                   eval="[(6, 0, [ref('quality_management.qm_partner_demo_4'),
+                                  ref('quality_management.qm_partner_demo_5'),
+                                  ref('quality_management.qm_partner_demo_1')])]"/>
+            <field name="act_number">PI-1255</field>
+            <field name="act_date">2024-09-29</field>
+            <field name="reason_description">Natural sediment products, conditions were not specified in the contract.</field>
+            <field name="classification">major</field>
+            <field name="result_description">Form additional conditions to the contract</field>
+        </record>
+
+        <record id="qm_int_investigation_demo_3" model="qm.internal.investigation">
+            <field name="name">INV0004</field>
+            <field name="state">at_work</field>
+            <field name="performer_id" ref="qm_partner_demo_2"/>
+            <field name="participants_ids"
+                   eval="[(6, 0, [ref('quality_management.qm_partner_demo_4'),
+                                  ref('quality_management.qm_partner_demo_5'),
+                                  ref('quality_management.qm_partner_demo_1')])]"/>
+            <field name="reason_description">Violation of the rules of correspondence with clients</field>
+            <field name="classification">other</field>
+            <field name="result_description">individual conversation</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record id="product_template_demo_0" model="product.template">
+            <field name="name">Modified corn starch (25 kg)</field>
+            <field name="standard_price">785.0</field>
+            <field name="list_price">785.0</field>
+            <field name="detailed_type">consu</field>
+            <field name="weight">25.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Modified corn starch 25 kg is supplied in polyethylene bags</field>
+        </record>
+
+        <record id="product_template_demo_1" model="product.template">
+            <field name="name">Glucose syrup (15 l)</field>
+            <field name="standard_price">127.0</field>
+            <field name="list_price">127.0</field>
+            <field name="detailed_type">consu</field>
+            <field name="weight">12.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Glucose syrup (15 l) in kegs</field>
+        </record>
+
+        <record id="product_template_demo_2" model="product.template">
+            <field name="name">Caramel corn molasses (50 l)</field>
+            <field name="standard_price">57.0</field>
+            <field name="list_price">57.0</field>
+            <field name="detailed_type">consu</field>
+            <field name="weight">50.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="description_sale">Corn caramel molasses in barrels (50 l)</field>
+        </record>
+
+    </data>
+</odoo>

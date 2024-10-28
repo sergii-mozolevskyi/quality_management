@@ -1,0 +1,1 @@
+from . import qm_form_investigations_wizard

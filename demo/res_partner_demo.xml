@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="qm_partner_demo_0" model="res.partner">
+            <field name="name">Cris Evans</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="qm_partner_demo_1" model="res.partner">
+            <field name="name">James Lee</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="qm_partner_demo_2" model="res.partner">
+            <field name="name">Inna Pruhodko</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="qm_partner_demo_3" model="res.partner">
+            <field name="name">Osvald Gendic</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="qm_partner_demo_4" model="res.partner">
+            <field name="name">Chu Fe</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="qm_partner_demo_5" model="res.partner">
+            <field name="name">Marry Osborn</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="qm_partner_demo_6" model="res.partner">
+            <field name="name">Jason Welberg</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="qm_partner_demo_7" model="res.partner">
+            <field name="name">Olha Choo</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <record id="qm_partner_company_demo_0" model="res.partner">
+                <field name="name">ACICO Inc.</field>
+                <field name="is_company">1</field>
+                <field name="street">317 Fairchild Dr</field>
+                <field name="city">Fairfield</field>
+                <field name="zip">94535</field>
+                <field name="country_id" ref="base.us"/>
+                <field name="phone">(941)-284-4875</field>
+                <field name="vat">US12345674</field>
+        </record>
+
+        <record id="qm_partner_company_demo_1" model="res.partner">
+                <field name="name">GBM conc.</field>
+                <field name="is_company">1</field>
+                <field name="city">Fairfield</field>
+                <field name="zip">94555</field>
+                <field name="country_id" ref="base.us"/>
+                <field name="phone">(944)-204-4815</field>
+                <field name="vat">US125667453</field>
+        </record>
+
+        <record id="qm_partner_company_demo_2" model="res.partner">
+                <field name="name">Albatros comp</field>
+                <field name="is_company">1</field>
+                <field name="city">Jonsonville</field>
+                <field name="zip">54555</field>
+                <field name="country_id" ref="base.us"/>
+                <field name="phone">(944)-211-6745</field>
+                <field name="vat">US198137453</field>
+        </record>
+
+        <record id="qm_partner_company_demo_2" model="res.partner">
+                <field name="name">COMPES inc.</field>
+                <field name="is_company">1</field>
+                <field name="city">Panama</field>
+                <field name="zip">11155</field>
+                <field name="country_id" ref="base.us"/>
+                <field name="phone">(644)-211-6745</field>
+                <field name="vat">24198137453</field>
+        </record>
+    </data>
+</odoo>

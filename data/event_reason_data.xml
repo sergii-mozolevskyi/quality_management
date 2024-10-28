@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="quality_contract" model="qm.event.reason">
+            <field name="name">Non-compliance quality contract terms</field>
+            <field name="description">Objective discrepancy between the quality of products and the terms of the contract</field>
+        </record>
+
+        <record id="quality_state_standard" model="qm.event.reason">
+            <field name="name">Non-compliance state standards</field>
+            <field name="description">Non-compliance state standards</field>
+        </record>
+
+        <record id="technical_specifications" model="qm.event.reason">
+            <field name="name">Non-compliance technical specifications</field>
+            <field name="description">Objective discrepancy between the quality of a thing and technical specifications</field>
+        </record>
+
+        <record id="quality_samples" model="qm.event.reason">
+            <field name="name">Non-compliance quality of samples</field>
+            <field name="description">Objective discrepancy between the quality of products and the samples</field>
+        </record>
+
+        <record id="assortment_discrepancy" model="qm.event.reason">
+            <field name="name">Assortment discrepancy</field>
+            <field name="description">Assortment discrepancy of the supplied goods</field>
+        </record>
+
+        <record id="poor_quality" model="qm.event.reason">
+            <field name="name">Supplies of poor quality</field>
+            <field name="description">Supplies of poor quality products</field>
+        </record>
+
+        <record id="incomplete_product" model="qm.event.reason">
+            <field name="name">Supplies incomplete</field>
+            <field name="description">Supplies incomplete products</field>
+        </record>
+
+        <record id="violation_trade_rules" model="qm.event.reason">
+            <field name="name">Violation of trading rules</field>
+            <field name="description">Violation of trading rules</field>
+        </record>
+
+    </data>
+</odoo>

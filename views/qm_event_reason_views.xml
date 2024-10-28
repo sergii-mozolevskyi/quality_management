@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="quality_management_event_reason_tree" model="ir.ui.view">
+        <field name="name">qm.event.reason.tree ()</field>
+        <field name="model">qm.event.reason</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="quality_management_event_reason_form" model="ir.ui.view">
+        <field name="name">qm.event.reason.form ()</field>
+        <field name="model">qm.event.reason</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_qm_event_reason_window" model="ir.actions.act_window">
+        <field name="name">Event reason</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">qm.event.reason</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="quality_management_menu_event_reason"
+              action="action_qm_event_reason_window"
+              parent="quality_management_menu_complaints"
+              name="Event reason" sequence="250"/>
+
+</odoo>

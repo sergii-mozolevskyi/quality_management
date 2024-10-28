@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="quality_management_costs_tree" model="ir.ui.view">
+        <field name="name">qm.costs.tree ()</field>
+        <field name="model">qm.costs</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="investigation_id"/>
+                <field name="amount"/>
+                <field name="currency_id"/>
+                <field name="consumption"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="quality_management_costs_form" model="ir.ui.view">
+        <field name="name">qm.costs.form ()</field>
+        <field name="model">qm.costs</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="investigation_id"/>
+                            <field name="amount"/>
+                            <field name="currency_id"/>
+                            <field name="consumption"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="qm_costs_pivot" model="ir.ui.view">
+        <field name="name">qm.costs.pivot (qm_costs)</field>
+        <field name="model">qm.costs</field>
+        <field name="priority">50</field>
+        <field name="arch" type="xml">
+            <pivot string="Costs" sample="1" disable_linking="1" display_quantity="1">
+                <field name="create_date" interval="year" type="col"/>
+                <field name="create_date" interval="month" type="col"/>
+                <field name="currency_id" type="col"/>
+                <field name="investigation_id" type="row"/>
+                <field name="consumption" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_qm_costs_window" model="ir.actions.act_window">
+        <field name="name">Investigation costs</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">qm.costs</field>
+        <field name="view_mode">tree,form,pivot</field>
+    </record>
+
+    <menuitem id="quality_management_menu_costs"
+              action="action_qm_costs_window"
+              parent="quality_management_menu_investigations"
+              name="Investigation costs" sequence="200"/>
+
+</odoo>

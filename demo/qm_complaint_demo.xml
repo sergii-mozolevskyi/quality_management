@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="qm_complaint_demo_0" model="qm.complaint">
+            <field name="name">C00001/2024-08-12</field>
+            <field name="state">canceled</field>
+            <field name="res_partner_id" ref="qm_partner_demo_0"/>
+            <field name="discovery_date">2024-07-12</field>
+            <field name="deadline_date">2024-11-01</field>
+            <field name="description">Сomplaint about the work of the support service.</field>
+            <field name="comment">The support service is currently down</field>
+            <field name="source_information_id" ref="complaint_other"/>
+            <field name="customer_id" ref="qm_partner_company_demo_0"/>
+        </record>
+
+        <record id="qm_complaint_demo_1" model="qm.complaint">
+            <field name="name">C00002/2024-08-12</field>
+            <field name="state">completed</field>
+            <field name="res_partner_id" ref="qm_partner_demo_0"/>
+            <field name="discovery_date">2024-08-12</field>
+            <field name="deadline_date">2024-11-01</field>
+            <field name="description">A defect in the packaging was found, as well as foreign impurities
+                in the products in one bag.</field>
+            <field name="source_information_id" ref="complaint_from_dealer"/>
+            <field name="counterparty_id" ref="qm_partner_company_demo_1"/>
+        </record>
+
+        <record id="qm_complaint_demo_2" model="qm.complaint">
+            <field name="name">C00003/2024-09-05</field>
+            <field name="state">investigation</field>
+            <field name="res_partner_id" ref="qm_partner_demo_1"/>
+            <field name="discovery_date">2024-09-05</field>
+            <field name="deadline_date">2024-12-17</field>
+            <field name="description">A complaint was received about the lack of a certificate of conformity
+                in a batch of products. In one case, a deviation in the color of the products was detected</field>
+            <field name="source_information_id" ref="complaint_from_client"/>
+            <field name="customer_id" ref="qm_partner_company_demo_2"/>
+        </record>
+
+        <record id="qm_complaint_demo_3" model="qm.complaint">
+            <field name="name">C00004/2024-10-04</field>
+            <field name="state">at_work</field>
+            <field name="res_partner_id" ref="qm_partner_demo_1"/>
+            <field name="discovery_date">2024-10-04</field>
+            <field name="deadline_date">2024-12-20</field>
+            <field name="description">Inconsistency of the packaging standard with the terms of the contract.
+                Absence of stickers described in the appendix to agreement no IPA-0111/12</field>
+            <field name="comment">Determination of the person responsible for the investigation</field>
+            <field name="source_information_id" ref="complaint_internal"/>
+            <field name="customer_id" ref="qm_partner_demo_2"/>
+        </record>
+
+        <record id="qm_complaint_demo_4" model="qm.complaint">
+            <field name="name">C00005/2024-10-23</field>
+            <field name="state">draft</field>
+            <field name="res_partner_id" ref="qm_partner_demo_0"/>
+            <field name="discovery_date">2024-10-23</field>
+            <field name="deadline_date">2025-01-10</field>
+            <field name="comment">A complaint was received without specifying the product or service,
+                an additional request was sent</field>
+            <field name="description">Lack of packaging, damage</field>
+            <field name="source_information_id" ref="complaint_other"/>
+             <field name="customer_id" ref="qm_partner_demo_5"/>
+        </record>
+
+    </data>
+</odoo>

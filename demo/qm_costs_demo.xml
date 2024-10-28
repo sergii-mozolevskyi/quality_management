@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="qm_costs_demo_0" model="qm.costs">
+            <field name="investigation_id" ref="quality_management.qm_int_investigation_demo_0"/>
+            <field name="name">COS0001</field>
+            <field name="amount">300.00</field>
+            <field name="consumption">Business trip to the port of Odessa</field>
+        </record>
+
+        <record id="qm_costs_demo_1" model="qm.costs">
+            <field name="investigation_id" ref="quality_management.qm_int_investigation_demo_0"/>
+            <field name="name">COS0002</field>
+            <field name="amount">123.00</field>
+            <field name="consumption">Fuel costs</field>
+        </record>
+
+        <record id="qm_costs_demo_2" model="qm.costs">
+            <field name="investigation_id" ref="quality_management.qm_int_investigation_demo_1"/>
+            <field name="name">COS0003</field>
+            <field name="amount">150.00</field>
+            <field name="consumption">Business trip to the warehouse.</field>
+        </record>
+
+        <record id="qm_costs_demo_3" model="qm.costs">
+            <field name="investigation_id" ref="quality_management.qm_int_investigation_demo_1"/>
+            <field name="name">COS0004</field>
+            <field name="amount">75.00</field>
+            <field name="consumption">Conduct additional briefings</field>
+        </record>
+
+        <record id="qm_costs_demo_4" model="qm.costs">
+            <field name="investigation_id" ref="quality_management.qm_int_investigation_demo_2"/>
+            <field name="name">COS0005</field>
+            <field name="amount">25.00</field>
+            <field name="consumption">Sending documents</field>
+        </record>
+
+    </data>
+</odoo>

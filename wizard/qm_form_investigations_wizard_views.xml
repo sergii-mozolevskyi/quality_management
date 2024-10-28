@@ -1,0 +1,42 @@
+<odoo>
+    <record id="qm_form_investigations_wizard_form" model="ir.ui.view">
+        <field name="name">qm.form.investigations.wizard.form</field>
+        <field name="model">qm.form.investigations.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Create internal investigations" name="create_investigations" type="object" class="oe_highlight" data-hotkey="q"/>
+                </header>
+                <div class="alert alert-info text-center" role="status">
+                    This wizard for mass create internal investigations.
+                </div>
+                <group>
+                    <group>
+                        <field name="classification"/>
+                        <field name="res_partner_id"/>
+                    </group>
+                    <group>
+                        <field name="complaint_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Claims">
+                            <field name="claim_ids"/>
+                        </page>
+                        <page string="Internal investigations" invisible="investigation_ids">
+                            <field name="investigation_ids"/>
+                        </page>
+                    </notebook>
+                </group>
+                <footer>
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="qm_form_investigations_wizard_action" model="ir.actions.act_window">
+        <field name="name">Mass create investigations</field>
+        <field name="res_model">qm.form.investigations.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
