@@ -28,6 +28,7 @@
         'wizard/qm_form_investigations_wizard_views.xml',
 
         'views/res_partner_view.xml',
+        'views/product_template_view.xml',
         'views/quality_management_menu.xml',
         'views/qm_complaint_views.xml',
         'views/qm_source_information_views.xml',
@@ -35,6 +36,8 @@
         'views/qm_claim_views.xml',
         'views/qm_internal_investigation_views.xml',
         'views/qm_costs_views.xml',
+
+        'report/qm_act_of_investigation.xml',
     ],
 
     'demo': [

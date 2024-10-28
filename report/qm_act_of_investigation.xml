@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="qm_act_of_investigation_main_report" model="ir.actions.report">
+            <field name="name">Act of investigation</field>
+            <field name="model">qm.internal.investigation</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">quality_management.qm_act_of_investigation_main_template</field>
+            <field name="report_file">quality_management.qm_act_of_investigation_main_template</field>
+            <field name="print_report_name">(object._get_report_base_filename())</field>
+            <field name="paperformat_id" ref="base.paperformat_euro"/>
+            <field name="attachment"/>
+            <field name="binding_model_id" ref="quality_management.model_qm_internal_investigation"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="qm_act_of_investigation_main_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="web.external_layout">
+                        <t t-set="lang" t-value="doc.performer_id.lang"/>
+                        <t t-set="doc" t-value="doc.with_context(lang=lang)"/>
+                        <div class="page">
+                            <div name="qm_act_info_header" t-att-style="'font-size: 25px; padding: 5px;'">
+                                <h1>
+                                    <strong>Act:</strong>
+                                    <span class="badge text-bg-secondary"><div t-field="doc.act_number"/></span>
+                                    <strong>from:</strong>
+                                    <span class="badge text-bg-secondary"><div t-field="doc.act_date"/></span>
+                                </h1>
+                                <strong>Classification:</strong>
+                                <span class="badge text-bg-light"><div t-field="doc.classification"/></span>
+                            </div>
+                            <div name="qm_performer_information" t-att-style="'font-size: 16px; padding: 5px;'">
+                                <h5>
+                                    <strong>Performer:</strong>
+                                    <span class="badge text-bg-light"><div t-field="doc.performer_id"/></span>
+                                </h5>
+                                <h5>
+                                    <span><strong>Reason description:</strong></span>
+                                    <div t-field="doc.reason_description"/>
+                                </h5>
+                            </div>
+                            <div name="qm_participants_info" t-att-style="'font-size: 16px; padding: 5px;'">
+                                <h5>
+                                    <strong>Participants:</strong>
+                                    <div t-field="doc.participants_ids"/>
+                                </h5>
+                            </div>
+                            <div name="qm_investigation_costs">
+                                <t t-set="costs"
+                                   t-value="doc.env['qm.costs'].sudo().search(
+                                                    domain=[('investigation_id', '=', doc.id)], order=('id desc'))"/>
+                                <br/>
+                                <h4>Investigation costs:</h4>
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Consumption</th>
+                                            <th>Currency</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-set="count_total" t-value="0"/>
+                                        <tr t-foreach="costs" t-as="costs_line">
+                                            <td><span t-esc="costs_line_index + 1"/></td>
+                                            <td><span t-field="costs_line.consumption"/></td>
+                                            <td><span t-field="costs_line.currency_id.name"/></td>
+                                            <td><span t-field="costs_line.amount"/></td>
+                                            <t  t-set="count_total" t-value="count_total + costs_line.amount"/>
+                                        </tr>
+                                        <tr>
+                                            <td><span/></td>
+                                            <td><span/></td>
+                                            <td><strong>Total:</strong></td>
+                                            <td><strong><t t-esc="count_total"/></strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br/>
+                            <div name="qm_result_description">
+                                <h5>
+                                    <strong>Result Description:</strong>
+                                    <span><div t-field="doc.result_description"/></span>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span t-field="res_company.city"/>
+                                    <span t-esc="context_timestamp(datetime.datetime.today().replace(microsecond=0))"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

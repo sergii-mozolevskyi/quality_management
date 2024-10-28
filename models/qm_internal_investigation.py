@@ -1,4 +1,5 @@
 import logging
+import string
 
 from odoo import models, fields
 
@@ -71,3 +72,11 @@ class QualityManagementInternalInvestigation(models.Model):
         ],
         default='draft',
     )
+
+    def _get_report_base_filename(self):
+        file_name = string.Template('$name($number_act - $date_act)')
+        return file_name.substitute(
+            name=self.name,
+            number_act=self.act_number,
+            date_act=self.act_date,
+        )

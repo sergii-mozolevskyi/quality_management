@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="qm_product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.product.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="open_claims" type="object"
+                        icon="fa-sitemap" class="oe_stat_button">
+                    <field string="Claims" widget="statinfo" name="claim_count"/>
+                </button>
+            </div>
+        </field>
+    </record>
+</odoo>

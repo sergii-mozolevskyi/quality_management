@@ -18,14 +18,6 @@
                     <group>
                         <field name="complaint_id"/>
                     </group>
-                    <notebook>
-                        <page string="Claims">
-                            <field name="claim_ids"/>
-                        </page>
-                        <page string="Internal investigations" invisible="investigation_ids">
-                            <field name="investigation_ids"/>
-                        </page>
-                    </notebook>
                 </group>
                 <footer>
                     <button string="Cancel" class="btn btn-secondary" special="cancel" data-hotkey="x"/>
