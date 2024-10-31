@@ -7,12 +7,17 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="state"/>
                 <field name="classification"/>
                 <field name="performer_id"/>
                 <field name="act_number"/>
                 <field name="act_date"/>
                 <field name="complaint_id"/>
+                <field name="state"
+                       decoration-success="state == 'done'"
+                       decoration-info="state == 'draft'"
+                       decoration-primary="state == 'at_work'"
+                       decoration-warning="state == 'canceled'"
+                       widget="badge" optional="show"/>
             </tree>
         </field>
     </record>

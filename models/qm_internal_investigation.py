@@ -1,7 +1,7 @@
 import logging
 import string
 
-from odoo import models, fields
+from odoo import models, fields, api, exceptions
 
 _logger = logging.getLogger(__name__)
 
@@ -11,11 +11,16 @@ class QualityManagementInternalInvestigation(models.Model):
     _description = 'Internal investigations'
     _inherit = ['mail.thread']
 
-    name = fields.Char()
+    name = fields.Char(
+        string='Number',
+        compute='_compute_name',
+        store=True,
+        index='trigram',
+    )
 
     complaint_id = fields.Many2one(
         comodel_name='qm.complaint',
-        string='Complaint'
+        string='Complaint',
     )
 
     performer_id = fields.Many2one(
@@ -80,3 +85,27 @@ class QualityManagementInternalInvestigation(models.Model):
             number_act=self.act_number,
             date_act=self.act_date,
         )
+
+    @api.depends('complaint_id')
+    def _compute_name(self):
+        for inv in self:
+            if not inv.name:
+                inv_name = string.Template('$pref$number')
+                inv.name = inv_name.substitute(
+                    pref='INV-',
+                    number=str(inv.id).zfill(5),
+                )
+
+    @api.constrains('state')
+    def _constrains_state(self):
+        self.ensure_one()
+        if not self.state == 'at_work':
+            return True
+
+        if not self.complaint_id:
+            return True
+
+        comp_state = self.complaint_id.state
+        if comp_state == 'completed' or comp_state =='canceled':
+            raise exceptions.UserError(
+                ("Invalid operation! Complaint closed!"))

@@ -1,6 +1,7 @@
 import logging
+import string
 
-from odoo import models, fields
+from odoo import models, fields, api, exceptions
 
 _logger = logging.getLogger(__name__)
 
@@ -10,7 +11,13 @@ class QualityManagementComplaint(models.Model):
     _description = 'Complaints'
     _inherit = ['mail.thread']
 
-    name = fields.Char()
+    name = fields.Char(
+        string='Number',
+        readonly=True,
+        compute='_compute_name',
+        store=True,
+        index='trigram',
+    )
 
     active = fields.Boolean(
         default=True,
@@ -85,3 +92,35 @@ class QualityManagementComplaint(models.Model):
         inverse_name='complaint_id',
         string='Internal investigations',
     )
+
+    @api.ondelete(at_uninstall=False)
+    def _ondelete(self):
+        self.ensure_one()
+        if self.claim_ids or self.internal_investigation_ids:
+            raise exceptions.UserError(
+                ("You cannot delete document with claims and investigations."))
+
+    @api.depends('state')
+    def _compute_name(self):
+        for complaint in self:
+            complaint_has_name = complaint.name
+            if not complaint_has_name:
+                complaint_name = string.Template('$pref$number')
+                complaint.name = complaint_name.substitute(
+                    pref='COM-',
+                    number=str(complaint.id).zfill(5),
+                )
+
+    @api.constrains('state')
+    def _constrains_state(self):
+        self.ensure_one()
+        if self.state == 'completed' or self.state == 'canceled':
+            inv_count = self.env['qm.internal.investigation'].search_count(
+                domain=[
+                    ('complaint_id', '=', self.id),
+                    ('state', '=', 'at_work'),
+                ]
+            )
+            if inv_count:
+                raise exceptions.UserError(
+                    ("Invalid operation! Investigations did not closed!"))

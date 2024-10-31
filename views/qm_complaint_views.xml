@@ -7,12 +7,17 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="state"/>
                 <field name="discovery_date"/>
                 <field name="source_information_id"/>
                 <field name="res_partner_id"/>
                 <field name="deadline_date"/>
                 <field name="description"/>
+                <field name="state"
+                       decoration-success="state == 'completed'"
+                       decoration-info="state == 'at_work'"
+                       decoration-primary="state == 'investigation'"
+                       decoration-warning="state == 'canceled'"
+                       widget="badge" optional="show"/>
             </tree>
         </field>
     </record>

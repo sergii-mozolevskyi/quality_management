@@ -1,4 +1,5 @@
 import logging
+import string
 
 from odoo import models, fields, api
 
@@ -9,7 +10,12 @@ class QualityManagementClaim(models.Model):
     _name = 'qm.claim'
     _description = 'Claims'
 
-    name = fields.Char()  # invoice_number / product_id.name
+    name = fields.Char(
+        string='Number',
+        compute='_compute_name',
+        store=True,
+        index='trigram',
+    )
 
     active = fields.Boolean(
         default=True,
@@ -65,3 +71,15 @@ class QualityManagementClaim(models.Model):
         self.ensure_one()
         if self.quantity < 0:
             self.quantity *= -1
+
+    @api.depends('invoice_number')
+    def _compute_name(self):
+        for claim in self:
+            claim_has_name = claim.name and claim.name != '/'
+            if not claim_has_name:
+                claim_name = string.Template('$pref$number/$invoice')
+                claim.name = claim_name.substitute(
+                    pref='CL-',
+                    number=claim.id,
+                    invoice= claim.invoice_number or '0',
+                )
