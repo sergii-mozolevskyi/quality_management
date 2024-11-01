@@ -30,7 +30,7 @@ class QualityManagementComplaint(models.Model):
             ('at_work', 'At work'),
             ('investigation', 'Investigation'),
             ('completed', 'Completed'),
-            ('canceled', 'Cancelled'),
+            ('canceled', 'Canceled'),
         ],
         default='draft',
     )
@@ -95,6 +95,10 @@ class QualityManagementComplaint(models.Model):
 
     @api.ondelete(at_uninstall=False)
     def _ondelete(self):
+        """
+        A check that does not allow you to delete records
+        with claims or investigations.
+        """
         self.ensure_one()
         if self.claim_ids or self.internal_investigation_ids:
             raise exceptions.UserError(
@@ -102,6 +106,9 @@ class QualityManagementComplaint(models.Model):
 
     @api.depends('state')
     def _compute_name(self):
+        """
+        Generates the document number according to the given algorithm
+        """
         for complaint in self:
             complaint_has_name = complaint.name
             if not complaint_has_name:
@@ -113,6 +120,10 @@ class QualityManagementComplaint(models.Model):
 
     @api.constrains('state')
     def _constrains_state(self):
+        """
+        Does not allow closing or canceling complaints
+        with open investigations
+        """
         self.ensure_one()
         if self.state == 'completed' or self.state == 'canceled':
             inv_count = self.env['qm.internal.investigation'].search_count(

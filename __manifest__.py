@@ -20,7 +20,9 @@
     },
 
     'data': [
+        'security/quality_management_groups.xml',
         'security/ir.model.access.csv',
+        'security/quality_management_security.xml',
 
         'data/source_information_data.xml',
         'data/event_reason_data.xml',

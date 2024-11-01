@@ -1,6 +1,5 @@
 from dateutil.relativedelta import relativedelta
 
-from odoo import Command
 from odoo.tests.common import TransactionCase
 from datetime import datetime
 
@@ -29,12 +28,14 @@ class TestCommon(TransactionCase):
         })
         self.qm_claim_test = self.env['qm.claim'].create({
             'complaint_id': self.qm_complaint_test.id,
-            'invoice_number':'INV-123456',
+            'invoice_number': 'INV-123456',
             'batch_number': '456-1',
             'event_reason_id': self.qm_event_reason_test.id,
             'description': 'Test text!',
         })
-        self.qm_investigation_test = self.env['qm.internal.investigation'].create({
+        self.qm_investigation_test = self.env[
+            'qm.internal.investigation'
+        ].create({
             'complaint_id': self.qm_complaint_test.id,
             'performer_id': self.qm_responsible_test.id,
             'act_number': 'Test0001',

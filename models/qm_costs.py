@@ -43,6 +43,9 @@ class QualityManagementInternalInvestigation(models.Model):
 
     @api.depends('investigation_id')
     def _compute_name(self):
+        """
+        Generates the document number according to the given algorithm
+        """
         for costs in self:
             if not costs.name:
                 costs_name = string.Template('$pref$number')

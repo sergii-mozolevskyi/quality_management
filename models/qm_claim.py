@@ -68,12 +68,18 @@ class QualityManagementClaim(models.Model):
 
     @api.constrains('quantity')
     def _constraint_negative_value(self):
+        """
+        Does not allow specifying negative values
+        """
         self.ensure_one()
         if self.quantity < 0:
             self.quantity *= -1
 
     @api.depends('invoice_number')
     def _compute_name(self):
+        """
+        Generates the document number according to the given algorithm
+        """
         for claim in self:
             claim_has_name = claim.name and claim.name != '/'
             if not claim_has_name:
@@ -81,5 +87,5 @@ class QualityManagementClaim(models.Model):
                 claim.name = claim_name.substitute(
                     pref='CL-',
                     number=claim.id,
-                    invoice= claim.invoice_number or '0',
+                    invoice=claim.invoice_number or '0',
                 )

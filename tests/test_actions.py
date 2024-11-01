@@ -1,5 +1,3 @@
-from os import write
-
 from odoo.addons.quality_management.tests.common import TestCommon
 from odoo.exceptions import UserError
 

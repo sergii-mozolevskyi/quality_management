@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="qm_internal_investigation_read_rule" model="ir.rule">
+            <field name="name">Quality management users can only view own investigation</field>
+            <field name="model_id" ref="model_qm_internal_investigation"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('performer_id', '=', user.partner_id.id)]</field>
+            <field name="groups" eval="[Command.link(ref('group_quality_management_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="qm_internal_investigation_rule_admin" model="ir.rule">
+            <field name="name">Quality management administrators have full rights on investigation</field>
+            <field name="model_id" ref="model_qm_internal_investigation"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[Command.link(ref('group_quality_management_admin'))]"/>
+        </record>
+
+        <record id="qm_complaint_read_rule" model="ir.rule">
+            <field name="name">Quality management users can only view own complaints</field>
+            <field name="model_id" ref="model_qm_complaint"/>
+            <field name="global" eval="False"/>
+            <field name="domain_force">[('res_partner_id', '=', user.partner_id.id)]</field>
+            <field name="groups" eval="[Command.link(ref('group_quality_management_user'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="qm_complaint_rule_admin" model="ir.rule">
+            <field name="name">Quality management administrators have full rights on complaints</field>
+            <field name="model_id" ref="model_qm_complaint"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[Command.link(ref('group_quality_management_admin'))]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="category_quality_management" model="ir.module.category">
+            <field name="name">Quality Management</field>
+            <field name="description">Quality Management (User access levels)</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="group_quality_management_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="category_quality_management"/>
+            <field name="comment">User (Quality Management)</field>
+        </record>
+
+        <record id="group_quality_management_admin" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="category_quality_management"/>
+            <field name="implied_ids"
+                   eval="[(6, 0, [ref('group_quality_management_user'),])]"/>
+            <field name="users" eval="[Command.link(ref('base.user_root')), Command.link(ref('base.user_admin'))]"/>
+            <field name="comment">Administrators of the Quality management (full rights)</field>
+        </record>
+    </data>
+</odoo>

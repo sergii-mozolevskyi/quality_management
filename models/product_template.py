@@ -14,6 +14,9 @@ class ProductTemplate(models.Model):
         )
 
     def open_claims(self):
+        """
+        Opens a list of selected Claims for this product, grouped by complaints
+        """
         return {
             'type': 'ir.actions.act_window',
             'name': 'List of Claims',
@@ -28,6 +31,9 @@ class ProductTemplate(models.Model):
         }
 
     def _compute_claims_count(self):
+        """
+        Calculates the number of claims about this product
+        """
         self.claim_count = self.env['qm.claim'].search_count(
             domain=[
                 ('product_id', '=', self.id)

@@ -11,6 +11,7 @@ class QualityManagementEventReason(models.Model):
 
     name = fields.Char(
         string='Name',
+        translate=True,
     )
 
     active = fields.Boolean(

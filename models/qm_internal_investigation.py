@@ -50,6 +50,7 @@ class QualityManagementInternalInvestigation(models.Model):
     )
 
     classification = fields.Selection(
+        string='Classification',
         selection=[
             ('critical', 'Critical'),
             ('major', 'Major'),
@@ -79,6 +80,9 @@ class QualityManagementInternalInvestigation(models.Model):
     )
 
     def _get_report_base_filename(self):
+        """
+        Generates a file name when printing reports
+        """
         file_name = string.Template('$name($number_act - $date_act)')
         return file_name.substitute(
             name=self.name,
@@ -88,6 +92,9 @@ class QualityManagementInternalInvestigation(models.Model):
 
     @api.depends('complaint_id')
     def _compute_name(self):
+        """
+        Generates the document number according to the given algorithm
+        """
         for inv in self:
             if not inv.name:
                 inv_name = string.Template('$pref$number')
@@ -98,6 +105,11 @@ class QualityManagementInternalInvestigation(models.Model):
 
     @api.constrains('state')
     def _constrains_state(self):
+        """
+        It does not allow to transfer the status to work
+        of investigations in which claims have already been
+        closed or canceled
+        """
         self.ensure_one()
         if not self.state == 'at_work':
             return True
@@ -106,6 +118,6 @@ class QualityManagementInternalInvestigation(models.Model):
             return True
 
         comp_state = self.complaint_id.state
-        if comp_state == 'completed' or comp_state =='canceled':
+        if comp_state == 'completed' or comp_state == 'canceled':
             raise exceptions.UserError(
                 ("Invalid operation! Complaint closed!"))

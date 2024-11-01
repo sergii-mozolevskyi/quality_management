@@ -1,6 +1,6 @@
 import logging
 
-from odoo import models, fields, api, exceptions, Command
+from odoo import models, fields, api, exceptions
 
 _logger = logging.getLogger(__name__)
 
@@ -27,7 +27,6 @@ class QualityManagementFormAnInvestigations(models.TransientModel):
         ],
         default='major',
     )
-
 
     def create_investigations(self):
         self.ensure_one()
@@ -65,6 +64,7 @@ class QualityManagementFormAnInvestigations(models.TransientModel):
         res['complaint_id'] = complaint_id
         return res
 
+
 class QualityManagementInvestigationLinesWizard(models.TransientModel):
-    _name='qm.investigation.lines.wizard'
+    _name = 'qm.investigation.lines.wizard'
     name = fields.Char()

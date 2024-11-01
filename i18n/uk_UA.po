@@ -1,0 +1,857 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* quality_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-01 16:26+0000\n"
+"PO-Revision-Date: 2024-11-01 16:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: quality_management
+#: model:ir.actions.report,print_report_name:quality_management.qm_act_of_investigation_main_report
+msgid "(object._get_report_base_filename())"
+msgstr ""
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "<span><strong>Reason description:</strong></span>"
+msgstr "<span><strong>Опис причини:</strong></span>"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "<strong>Act:</strong>"
+msgstr "<strong>Акт:</strong>"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "<strong>Classification:</strong>"
+msgstr "<strong>Класифікація:</strong>"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_internal_investigation_kanban
+msgid "<strong>Participants:</strong>"
+msgstr "<strong>Учасники:</strong>"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "<strong>Performer:</strong>"
+msgstr "<strong>Виконавець:</strong>"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "<strong>Result Description:</strong>"
+msgstr "<strong>Опис результату:</strong>"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "<strong>Total:</strong>"
+msgstr "<strong>Всього:</strong>"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "<strong>from:</strong>"
+msgstr "<strong>від:</strong>"
+
+#. module: quality_management
+#: model:qm.complaint,description:quality_management.qm_complaint_demo_2
+msgid ""
+"A complaint was received about the lack of a certificate of conformity in a "
+"batch of products. In one case, a deviation in the color of the products was"
+" detected"
+msgstr ""
+"Надійшла скарга про відсутність сертифіката відповідності в партії "
+"продукції.В одному випадку виявлено відхилення в кольорі продукції"
+
+#. module: quality_management
+#: model:qm.complaint,comment:quality_management.qm_complaint_demo_4
+msgid ""
+"A complaint was received without specifying the product or service,\n"
+"                an additional request was sent"
+msgstr ""
+"Надійшла скарга без вказівки товару чи послуги, надіслано додатковий запит"
+
+#. module: quality_management
+#: model:qm.complaint,description:quality_management.qm_complaint_demo_1
+msgid ""
+"A defect in the packaging was found, as well as foreign impurities\n"
+"                in the products in one bag."
+msgstr "Виявлено дефект упаковки, а також сторонні домішки в одному мішку"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__act_date
+msgid "Act date"
+msgstr "Дата акта"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__act_number
+msgid "Act number"
+msgstr "Номер акта"
+
+#. module: quality_management
+#: model:ir.actions.report,name:quality_management.qm_act_of_investigation_main_report
+msgid "Act of investigation"
+msgstr "Акт розслідування"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__message_needaction
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__message_needaction
+msgid "Action Needed"
+msgstr "Потрібна дія"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__active
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__active
+#: model:ir.model.fields,field_description:quality_management.field_qm_event_reason__active
+#: model:ir.model.fields,field_description:quality_management.field_qm_source_information__active
+msgid "Active"
+msgstr "Активний"
+
+#. module: quality_management
+#: model:res.groups,name:quality_management.group_quality_management_admin
+msgid "Administrator"
+msgstr "Адміністратор"
+
+#. module: quality_management
+#: model:res.groups,comment:quality_management.group_quality_management_admin
+msgid "Administrators of the Quality management (full rights)"
+msgstr "Адміністратори управління якістю (повні права)"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__amount
+msgid "Ammount"
+msgstr "Сума"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "Amount"
+msgstr "Сума"
+
+#. module: quality_management
+#: model:qm.event.reason,name:quality_management.assortment_discrepancy
+msgid "Assortment discrepancy"
+msgstr "Невідповідність асортименту"
+
+#. module: quality_management
+#: model:qm.event.reason,description:quality_management.assortment_discrepancy
+msgid "Assortment discrepancy of the supplied goods"
+msgstr "Невідповідність асортименту товарів, що поставляються"
+
+#. module: quality_management
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_complaint__state__at_work
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_internal_investigation__state__at_work
+msgid "At work"
+msgstr "В роботі"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__message_attachment_count
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__message_attachment_count
+msgid "Attachment Count"
+msgstr "Кількість вкладень"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__batch_number
+msgid "Batch number"
+msgstr "Номер партії"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_form_investigations_wizard_form
+msgid "Cancel"
+msgstr "Відмінити"
+
+#. module: quality_management
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_complaint__state__canceled
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_internal_investigation__state__canceled
+msgid "Canceled"
+msgstr "Відмінено"
+
+#. module: quality_management
+#: model:product.template,name:quality_management.product_template_demo_2
+msgid "Caramel corn molasses (50 l)"
+msgstr "Карамель кукурудзяна патока (50 л)"
+
+#. module: quality_management
+#: model:ir.model,name:quality_management.model_qm_event_reason
+msgid "Cause of the event"
+msgstr "Причина події"
+
+#. module: quality_management
+#: model:ir.actions.act_window,name:quality_management.action_qm_claim_window
+#: model:ir.model,name:quality_management.model_qm_claim
+#: model:ir.model.fields,field_description:quality_management.field_product_product__claim_count
+#: model:ir.model.fields,field_description:quality_management.field_product_template__claim_count
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__claim_ids
+#: model:ir.ui.menu,name:quality_management.quality_management_menu_claim
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_product_template_form_view
+#: model_terms:ir.ui.view,arch_db:quality_management.quality_management_complaint_form
+msgid "Claims"
+msgstr "Претензії"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_form_investigations_wizard__classification
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__classification
+msgid "Classification"
+msgstr "Класифікація"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__comment
+msgid "Comment"
+msgstr "Коментар"
+
+#. module: quality_management
+#: model:ir.actions.act_window,name:quality_management.action_qm_complaint_window
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__complaint_id
+#: model:ir.model.fields,field_description:quality_management.field_qm_form_investigations_wizard__complaint_id
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__complaint_id
+msgid "Complaint"
+msgstr "Скарга"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_complaint_calendar
+msgid "Complaint calendar"
+msgstr "Календар скарг"
+
+#. module: quality_management
+#: model:qm.source.information,description:quality_management.complaint_internal
+msgid "Complaint from an internal employee"
+msgstr "Скарга внутрішнього співробітника"
+
+#. module: quality_management
+#: model:qm.source.information,description:quality_management.complaint_from_client
+msgid "Complaint from client or partner"
+msgstr "Скарга від клієнта або партнера"
+
+#. module: quality_management
+#: model:qm.source.information,description:quality_management.complaint_from_dealer
+msgid "Complaint from dealer about product"
+msgstr "Скарга дилера на товар"
+
+#. module: quality_management
+#: model:ir.model,name:quality_management.model_qm_complaint
+#: model:ir.model.fields,field_description:quality_management.field_res_partner__complaint_ids
+#: model:ir.model.fields,field_description:quality_management.field_res_users__complaint_ids
+#: model:ir.ui.menu,name:quality_management.quality_management_menu_complaint
+#: model:ir.ui.menu,name:quality_management.quality_management_menu_complaints
+msgid "Complaints"
+msgstr "Скарги"
+
+#. module: quality_management
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_complaint__state__completed
+msgid "Completed"
+msgstr "Виконано"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__consumption
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "Consumption"
+msgstr "Витрата (опис)"
+
+#. module: quality_management
+#: model:ir.model,name:quality_management.model_res_partner
+msgid "Contact"
+msgstr "Контракт"
+
+#. module: quality_management
+#: model:product.template,description_sale:quality_management.product_template_demo_2
+msgid "Corn caramel molasses in barrels (50 l)"
+msgstr "Патока кукурудзяна карамель в бочках (50л)"
+
+#. module: quality_management
+#: model:ir.model,name:quality_management.model_qm_costs
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__costs_ids
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_costs_pivot
+#: model_terms:ir.ui.view,arch_db:quality_management.quality_management_internal_investigation_form
+msgid "Costs"
+msgstr "Витрати"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__counterparty_id
+msgid "Counterparty"
+msgstr "Контрагент"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_form_investigations_wizard_form
+msgid "Create internal investigations"
+msgstr "Створіти внутрішні розслідування"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__create_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__create_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__create_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_event_reason__create_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_form_investigations_wizard__create_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__create_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_investigation_lines_wizard__create_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_source_information__create_uid
+msgid "Created by"
+msgstr "Створено"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__create_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__create_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__create_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_event_reason__create_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_form_investigations_wizard__create_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__create_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_investigation_lines_wizard__create_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_source_information__create_date
+msgid "Created on"
+msgstr "Створено на"
+
+#. module: quality_management
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_form_investigations_wizard__classification__critical
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_internal_investigation__classification__critical
+msgid "Critical"
+msgstr "Критичний"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__currency_id
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__customer_id
+msgid "Customer"
+msgstr "Клієнт"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__discovery_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__discovery_date
+msgid "Date of discovery"
+msgstr "Дата звернення"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__deadline_date
+msgid "Deadline"
+msgstr "Крайній строк"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_internal_investigation_kanban
+msgid "Delete"
+msgstr "Видалити"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__description
+#: model:ir.model.fields,field_description:quality_management.field_qm_event_reason__description
+#: model:ir.model.fields,field_description:quality_management.field_qm_source_information__description
+msgid "Description"
+msgstr "Опис"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__description
+msgid "Description of non-conformity"
+msgstr "Опис невідповідності"
+
+#. module: quality_management
+#: model:qm.complaint,comment:quality_management.qm_complaint_demo_3
+msgid "Determination of the person responsible for the investigation"
+msgstr "Визначення відповідального за розслідування"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__display_name
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__display_name
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__display_name
+#: model:ir.model.fields,field_description:quality_management.field_qm_event_reason__display_name
+#: model:ir.model.fields,field_description:quality_management.field_qm_form_investigations_wizard__display_name
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__display_name
+#: model:ir.model.fields,field_description:quality_management.field_qm_investigation_lines_wizard__display_name
+#: model:ir.model.fields,field_description:quality_management.field_qm_source_information__display_name
+msgid "Display Name"
+msgstr "Представлення"
+
+#. module: quality_management
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_internal_investigation__state__done
+msgid "Done"
+msgstr "Виконано"
+
+#. module: quality_management
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_complaint__state__draft
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_internal_investigation__state__draft
+msgid "Draft"
+msgstr "Чорновик"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_internal_investigation_kanban
+msgid "Edit"
+msgstr "Редагувати"
+
+#. module: quality_management
+#: model:ir.actions.act_window,name:quality_management.action_qm_event_reason_window
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__event_reason_id
+#: model:ir.ui.menu,name:quality_management.quality_management_menu_event_reason
+msgid "Event reason"
+msgstr "Причина події"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__message_follower_ids
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__message_follower_ids
+msgid "Followers"
+msgstr "Підписники"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__message_partner_ids
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Підписники (партнери)"
+
+#. module: quality_management
+#: model:qm.claim,description:quality_management.qm_claim_demo_1
+msgid "Foreign impurities were found in raw materials."
+msgstr "У сировині виявлено сторонні домішки."
+
+#. module: quality_management
+#: model:qm.source.information,name:quality_management.complaint_from_client
+msgid "From client"
+msgstr "Від клієнта"
+
+#. module: quality_management
+#: model:qm.source.information,name:quality_management.complaint_from_dealer
+msgid "From dealer"
+msgstr "Від дилера"
+
+#. module: quality_management
+#: model:qm.source.information,description:quality_management.complaint_other
+msgid "From other external sources"
+msgstr "З інших зовнішніх джерел"
+
+#. module: quality_management
+#: model:product.template,name:quality_management.product_template_demo_1
+msgid "Glucose syrup (15 l)"
+msgstr "Глюкозний сироп (15 л)"
+
+#. module: quality_management
+#: model:product.template,description_sale:quality_management.product_template_demo_1
+msgid "Glucose syrup (15 l) in kegs"
+msgstr "Глюкозний сироп (15 л) в кегах"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__has_message
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__has_message
+msgid "Has Message"
+msgstr "Є повідомлення"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__id
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__id
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__id
+#: model:ir.model.fields,field_description:quality_management.field_qm_event_reason__id
+#: model:ir.model.fields,field_description:quality_management.field_qm_form_investigations_wizard__id
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__id
+#: model:ir.model.fields,field_description:quality_management.field_qm_investigation_lines_wizard__id
+#: model:ir.model.fields,field_description:quality_management.field_qm_source_information__id
+msgid "ID"
+msgstr "Айді"
+
+#. module: quality_management
+#: model:ir.model.fields,help:quality_management.field_qm_complaint__message_needaction
+#: model:ir.model.fields,help:quality_management.field_qm_internal_investigation__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Якщо позначено, нові повідомлення вимагають вашої уваги."
+
+#. module: quality_management
+#: model:ir.model.fields,help:quality_management.field_qm_complaint__message_has_error
+#: model:ir.model.fields,help:quality_management.field_qm_internal_investigation__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Якщо позначено, деякі повідомлення мають помилку доставки."
+
+#. module: quality_management
+#: model:qm.claim,description:quality_management.qm_claim_demo_3
+msgid "In one case, a deviation in the color of the products was detected."
+msgstr "В одному випадку виявлено відхилення в кольорі продукції."
+
+#. module: quality_management
+#: model:qm.complaint,description:quality_management.qm_complaint_demo_3
+msgid ""
+"Inconsistency of the packaging standard with the terms of the contract.\n"
+"                Absence of stickers described in the appendix to agreement no IPA-0111/12"
+msgstr ""
+"Невідповідність стандарту упаковки умовам договору. Відсутність наклейок, "
+"описаних у додатку до договору № IPA-0111/12"
+
+#. module: quality_management
+#: model:qm.claim,description:quality_management.qm_claim_demo_4
+msgid ""
+"Inconsistency of the packaging standard with the terms of the contract. "
+"Absence of stickers described in the appendix to agreement no IPA-0111/12"
+msgstr ""
+"Невідповідність стандарту упаковки умовам договору. Відсутність наклейок, "
+"описаних у додатку до договору № IPA-0111/12"
+
+#. module: quality_management
+#: model:qm.source.information,name:quality_management.complaint_internal
+msgid "Internal"
+msgstr "Внутрішні"
+
+#. module: quality_management
+#: model:ir.actions.act_window,name:quality_management.action_qm_internal_investigation_window
+msgid "Internal investigation"
+msgstr "Внутрішнє розслідування"
+
+#. module: quality_management
+#: model:ir.model,name:quality_management.model_qm_internal_investigation
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__internal_investigation_ids
+#: model:ir.model.fields,field_description:quality_management.field_res_partner__internal_investigation_ids
+#: model:ir.model.fields,field_description:quality_management.field_res_users__internal_investigation_ids
+#: model:ir.ui.menu,name:quality_management.quality_management_menu_internal_investigation
+#: model_terms:ir.ui.view,arch_db:quality_management.quality_management_complaint_form
+msgid "Internal investigations"
+msgstr "Внутрішні розслідування"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__investigation_id
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_complaint__state__investigation
+msgid "Investigation"
+msgstr "Розслідування"
+
+#. module: quality_management
+#: model:ir.actions.act_window,name:quality_management.action_qm_costs_window
+#: model:ir.ui.menu,name:quality_management.quality_management_menu_costs
+msgid "Investigation costs"
+msgstr "Витрати на розслідування"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "Investigation costs:"
+msgstr "Витрати на розслідування:"
+
+#. module: quality_management
+#: model:ir.ui.menu,name:quality_management.quality_management_menu_investigations
+msgid "Investigations"
+msgstr "Розслідування"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__invoice_number
+msgid "Invoce number"
+msgstr "Номер накладної"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__message_is_follower
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__message_is_follower
+msgid "Is Follower"
+msgstr "Є підписником"
+
+#. module: quality_management
+#: model:qm.complaint,description:quality_management.qm_complaint_demo_4
+msgid "Lack of packaging, damage"
+msgstr "Відсутність упаковки, пошкодження"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__write_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__write_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__write_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_event_reason__write_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_form_investigations_wizard__write_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__write_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_investigation_lines_wizard__write_uid
+#: model:ir.model.fields,field_description:quality_management.field_qm_source_information__write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновлено"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__write_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__write_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__write_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_event_reason__write_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_form_investigations_wizard__write_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__write_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_investigation_lines_wizard__write_date
+#: model:ir.model.fields,field_description:quality_management.field_qm_source_information__write_date
+msgid "Last Updated on"
+msgstr "Востаннє оновлено"
+
+#. module: quality_management
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_form_investigations_wizard__classification__major
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_internal_investigation__classification__major
+msgid "Major"
+msgstr "Високий"
+
+#. module: quality_management
+#: model:ir.actions.act_window,name:quality_management.qm_form_investigations_wizard_action
+#: model:ir.model,name:quality_management.model_qm_form_investigations_wizard
+#: model_terms:ir.ui.view,arch_db:quality_management.quality_management_complaint_form
+msgid "Mass create investigations"
+msgstr "Масове створення розслідувань"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__message_has_error
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__message_has_error
+msgid "Message Delivery error"
+msgstr "Помилка доставки повідомлення"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__message_ids
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__message_ids
+msgid "Messages"
+msgstr "Повідомлення"
+
+#. module: quality_management
+#: model:product.template,name:quality_management.product_template_demo_0
+msgid "Modified corn starch (25 kg)"
+msgstr "Крохмаль кукурудзяний модифікований (25 кг)"
+
+#. module: quality_management
+#: model:product.template,description_sale:quality_management.product_template_demo_0
+msgid "Modified corn starch 25 kg is supplied in polyethylene bags"
+msgstr ""
+"Крохмаль кукурудзяний модифікований 25 кг поставляється в поліетиленових "
+"мішках"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_event_reason__name
+#: model:ir.model.fields,field_description:quality_management.field_qm_investigation_lines_wizard__name
+#: model:ir.model.fields,field_description:quality_management.field_qm_source_information__name
+msgid "Name"
+msgstr "Ім'я"
+
+#. module: quality_management
+#: model:qm.event.reason,name:quality_management.quality_contract
+msgid "Non-compliance quality contract terms"
+msgstr "Недотримання умов договору про якість"
+
+#. module: quality_management
+#: model:qm.event.reason,name:quality_management.quality_samples
+msgid "Non-compliance quality of samples"
+msgstr "Невідповідність якості зразків"
+
+#. module: quality_management
+#: model:qm.event.reason,description:quality_management.quality_state_standard
+#: model:qm.event.reason,name:quality_management.quality_state_standard
+msgid "Non-compliance state standards"
+msgstr "Невідповідність державним стандартам"
+
+#. module: quality_management
+#: model:qm.event.reason,name:quality_management.technical_specifications
+msgid "Non-compliance technical specifications"
+msgstr "Non-compliance technical specifications"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__name
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__name
+#: model:ir.model.fields,field_description:quality_management.field_qm_costs__name
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__name
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_act_of_investigation_main_template
+msgid "Number"
+msgstr "Номер"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__message_needaction_counter
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Кількість дій"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__message_has_error_counter
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__message_has_error_counter
+msgid "Number of errors"
+msgstr "Кількість помилок"
+
+#. module: quality_management
+#: model:ir.model.fields,help:quality_management.field_qm_complaint__message_needaction_counter
+#: model:ir.model.fields,help:quality_management.field_qm_internal_investigation__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Кількість повідомлень, які вимагають дії"
+
+#. module: quality_management
+#: model:ir.model.fields,help:quality_management.field_qm_complaint__message_has_error_counter
+#: model:ir.model.fields,help:quality_management.field_qm_internal_investigation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Кількість повідомлень з помилкою доставки"
+
+#. module: quality_management
+#: model:qm.event.reason,description:quality_management.technical_specifications
+msgid ""
+"Objective discrepancy between the quality of a thing and technical "
+"specifications"
+msgstr "Об'єктивна невідповідність якості речі технічним характеристикам"
+
+#. module: quality_management
+#: model:qm.event.reason,description:quality_management.quality_samples
+msgid "Objective discrepancy between the quality of products and the samples"
+msgstr "Об'єктивна невідповідність якості продукції зразкам"
+
+#. module: quality_management
+#: model:qm.event.reason,description:quality_management.quality_contract
+msgid ""
+"Objective discrepancy between the quality of products and the terms of the "
+"contract"
+msgstr "Об'єктивна невідповідність якості продукції умовам договору"
+
+#. module: quality_management
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_form_investigations_wizard__classification__other
+#: model:ir.model.fields.selection,name:quality_management.selection__qm_internal_investigation__classification__other
+#: model:qm.source.information,name:quality_management.complaint_other
+msgid "Other"
+msgstr "Інші"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__participants_ids
+#: model_terms:ir.ui.view,arch_db:quality_management.quality_management_internal_investigation_form
+msgid "Participants"
+msgstr "Учасники"
+
+#. module: quality_management
+#: model:ir.model.fields,help:quality_management.field_qm_internal_investigation__participants_ids
+msgid "Participants in the investigation of the incident"
+msgstr "Учасники розслідування інциденту"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_claim_pivot
+msgid "Pivot Claims"
+msgstr "Основні претензії"
+
+#. module: quality_management
+#: model:qm.claim,description:quality_management.qm_claim_demo_0
+msgid "Poor quality packaging was found in one of the packages."
+msgstr "В одному з пакунків виявлено неякісну упаковку."
+
+#. module: quality_management
+#: model:ir.model,name:quality_management.model_product_template
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__product_id
+msgid "Product"
+msgstr "Товар"
+
+#. module: quality_management
+#: model:ir.module.category,name:quality_management.category_quality_management
+#: model:ir.ui.menu,name:quality_management.quality_management_main_menu
+msgid "Quality Management"
+msgstr "Управління якістю"
+
+#. module: quality_management
+#: model:ir.module.category,description:quality_management.category_quality_management
+msgid "Quality Management (User access levels)"
+msgstr "Управління якістю (рівні доступу користувачів)"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__res_partner_id
+msgid "Responsible"
+msgstr "Відповідальний"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_form_investigations_wizard__res_partner_id
+msgid "Responsible for investigation"
+msgstr "Відповідальний за розслідування"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__source_information_id
+msgid "Source Information"
+msgstr "Джерела інформації"
+
+#. module: quality_management
+#: model:ir.actions.act_window,name:quality_management.action_qm_source_information_window
+#: model:ir.model,name:quality_management.model_qm_source_information
+#: model:ir.ui.menu,name:quality_management.quality_management_menu_source_information
+msgid "Source of information"
+msgstr "Джерело інформації"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__state
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__state
+msgid "State"
+msgstr "Статус"
+
+#. module: quality_management
+#: model:qm.event.reason,name:quality_management.incomplete_product
+msgid "Supplies incomplete"
+msgstr "Некомплект поставки"
+
+#. module: quality_management
+#: model:qm.event.reason,description:quality_management.incomplete_product
+msgid "Supplies incomplete products"
+msgstr "Постачає некомплектну продукцію"
+
+#. module: quality_management
+#: model:qm.event.reason,name:quality_management.poor_quality
+msgid "Supplies of poor quality"
+msgstr "Поставки неякісні"
+
+#. module: quality_management
+#: model:qm.event.reason,description:quality_management.poor_quality
+msgid "Supplies of poor quality products"
+msgstr "Поставки неякісної продукції"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__performer_id
+msgid "The performer"
+msgstr "Виконавець"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__reason_description
+msgid "The reason for the discrepancy"
+msgstr "Причина невідповідності"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__result_description
+msgid "The result of the investigation"
+msgstr "Результат розслідування"
+
+#. module: quality_management
+#: model:qm.complaint,comment:quality_management.qm_complaint_demo_0
+msgid "The support service is currently down"
+msgstr "Служба підтримки зараз не працює"
+
+#. module: quality_management
+#: model_terms:ir.ui.view,arch_db:quality_management.qm_form_investigations_wizard_form
+msgid "This wizard for mass create internal investigations."
+msgstr "Цей майстер для масового створення внутрішніх розслідувань."
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__uom_name
+msgid "Unit of Measure"
+msgstr "Одиниця вимірювання"
+
+#. module: quality_management
+#: model:res.groups,name:quality_management.group_quality_management_user
+msgid "User"
+msgstr "Користувач"
+
+#. module: quality_management
+#: model:res.groups,comment:quality_management.group_quality_management_user
+msgid "User (Quality Management)"
+msgstr "Користувач (управління якістю)"
+
+#. module: quality_management
+#: model:qm.event.reason,description:quality_management.violation_trade_rules
+#: model:qm.event.reason,name:quality_management.violation_trade_rules
+msgid "Violation of trading rules"
+msgstr "Порушення правил торгівлі"
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_complaint__website_message_ids
+#: model:ir.model.fields,field_description:quality_management.field_qm_internal_investigation__website_message_ids
+msgid "Website Messages"
+msgstr "Повідомлення веб-сайту"
+
+#. module: quality_management
+#: model:ir.model.fields,help:quality_management.field_qm_complaint__website_message_ids
+#: model:ir.model.fields,help:quality_management.field_qm_internal_investigation__website_message_ids
+msgid "Website communication history"
+msgstr "Історія спілкування сайту"
+
+#. module: quality_management
+#: model:qm.claim,description:quality_management.qm_claim_demo_2
+msgid "Wrong sertificate of conformity in a batch of products."
+msgstr "Неправильний сертифікат відповідності в партії продукції."
+
+#. module: quality_management
+#: model:ir.model,name:quality_management.model_qm_investigation_lines_wizard
+msgid "qm.investigation.lines.wizard"
+msgstr ""
+
+#. module: quality_management
+#: model:ir.model.fields,field_description:quality_management.field_qm_claim__quantity
+msgid "quantity"
+msgstr "кількість"
+
+#. module: quality_management
+#: model:qm.complaint,description:quality_management.qm_complaint_demo_0
+msgid "Сomplaint about the work of the support service."
+msgstr "Скарга на роботу служби підтримки."
